@@ -37,6 +37,7 @@ $routes->add('home', new Route(constant('URL_SUBFOLDER') . '/', array('controlle
 $routes->add('viewdetail', new Route(constant('URL_SUBFOLDER') . '/viewdetail/{id}', array('controller' => 'indexController', 'method'=>'viewdetail')));
 $routes->add('category', new Route(constant('URL_SUBFOLDER') . '/category/{id}', array('controller' => 'indexController', 'method'=>'category')));
 $routes->add('addtocart', new Route(constant('URL_SUBFOLDER') . '/addtocart', array('controller' => 'indexController', 'method'=>'addtocart')));
+$routes->add('addtocart1', new Route(constant('URL_SUBFOLDER') . '/addtocart1/{id}', array('controller' => 'indexController', 'method'=>'addtocart1')));
 $routes->add('deletecart', new Route(constant('URL_SUBFOLDER') . '/deletecart/{id}', array('controller' => 'indexController', 'method'=>'deletecart')));
 $routes->add('checkout', new Route(constant('URL_SUBFOLDER') . '/checkout', array('controller' => 'indexController', 'method'=>'checkout')));
 $routes->add('register', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'indexController', 'method'=>'register')));

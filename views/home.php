@@ -5,25 +5,25 @@
          <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
              <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                  <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                 <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                 <h5 class="font-weight-semi-bold m-0">Chất lượng sản phẩm</h5>
              </div>
          </div>
          <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
              <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                  <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                 <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                 <h5 class="font-weight-semi-bold m-0">Miễn phí vận chuyển</h5>
              </div>
          </div>
          <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
              <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                  <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                 <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                 <h5 class="font-weight-semi-bold m-0">14 ngày trả hàng</h5>
              </div>
          </div>
          <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
              <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
                  <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                 <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                 <h5 class="font-weight-semi-bold m-0">Hỗ trợ 24/7</h5>
              </div>
          </div>
      </div>
@@ -43,7 +43,7 @@
                  <?php foreach($cate_home->product as $key => $cate): ?>
                  <?php if($cate->id){$c = $c + 1;}?>
                  <?php endforeach;?>
-                 <p class="text-right"><?=$c.' '.'Products'?></p>
+                 <p class="text-right"><?=$c.' '.'Sản phẩm'?></p>
 
                  <a href="/category/<?=$cate_home->id?>" class="cat-img position-relative overflow-hidden mb-3">
                      <img class="img-fluid" src="img/cat-1.jpg" alt="">
@@ -88,7 +88,7 @@
  <!-- Products Start -->
  <div class="container-fluid pt-5">
      <div class="text-center mb-4">
-         <h2 class="section-title px-5"><span class="px-2">New Products</span></h2>
+         <h2 class="section-title px-5"><span class="px-2">Sản phẩm mới</span></h2>
      </div>
      <div class="row px-xl-5 pb-3">
          <?php foreach($product as $product): ?>
@@ -106,10 +106,9 @@
                  </div>
                  <div class="card-footer d-flex justify-content-between bg-light border">
                      <a href="/viewdetail/<?= $product->id?>" class="btn btn-sm text-dark p-0"><i
-                             class="fas fa-eye text-primary mr-1"></i>View
-                         Detail</a>
-                     <a href="/addtocart/<?= $product->id?>" class="btn btn-sm text-dark p-0"><i
-                             class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                             class="fas fa-eye text-primary mr-1"></i>Xem chi tiết</a>
+                     <a href="/addtocart1/<?= $product->id?>" class="btn btn-sm text-dark p-0"><i
+                             class="fas fa-shopping-cart text-primary mr-1"></i>Thêm giỏ hàng</a>
                  </div>
              </div>
          </div>
@@ -124,7 +123,7 @@
      <div class="row justify-content-md-center py-5 px-xl-5">
          <div class="col-md-6 col-12 py-5">
              <div class="text-center mb-2 pb-2">
-                 <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Stay Updated</span></h2>
+                 <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Cập nhật</span></h2>
                  <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod
                      duo labore labore.</p>
              </div>
@@ -132,7 +131,7 @@
                  <div class="input-group">
                      <input type="text" class="form-control border-white p-4" placeholder="Email Goes Here">
                      <div class="input-group-append">
-                         <button class="btn btn-primary px-4">Subscribe</button>
+                         <button class="btn btn-primary px-4">Đăng ký</button>
                      </div>
                  </div>
              </form>
@@ -145,7 +144,7 @@
  <!-- Products Start -->
  <div class="container-fluid pt-5">
      <div class="text-center mb-4">
-         <h2 class="section-title px-5"><span class="px-2">Product All</span></h2>
+         <h2 class="section-title px-5"><span class="px-2">Tất cả sản phẩm</span></h2>
      </div>
      <div class="row px-xl-5 pb-3">
 
@@ -163,10 +162,10 @@
                      </div>
                  </div>
                  <div class="card-footer d-flex justify-content-between bg-light border">
-                     <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View
-                         Detail</a>
-                     <a href="" class="btn btn-sm text-dark p-0"><i
-                             class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                     <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>Xem chi
+                         tiết</a>
+                     <a href="/addtocart1/<?= $product_all->id?>" class="btn btn-sm text-dark p-0"><i
+                             class="fas fa-shopping-cart text-primary mr-1"></i>Thêm giỏ hàng</a>
                  </div>
              </div>
          </div>

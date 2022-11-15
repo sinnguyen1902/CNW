@@ -12,33 +12,33 @@
                 <form>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" checked id="price-all">
-                        <label class="custom-control-label" for="price-all">All Price</label>
-                        <span class="badge border font-weight-normal">1000</span>
+                        <label class="custom-control-label" for="price-all">Tất cả giá</label>
+                        <span class="badge border font-weight-normal">1000vnđ</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" id="price-1">
-                        <label class="custom-control-label" for="price-1">$0 - $100</label>
-                        <span class="badge border font-weight-normal">150</span>
+                        <label class="custom-control-label" for="price-1">0 vnđ - 100 vnđ</label>
+                        <span class="badge border font-weight-normal">0 vnđ - 100 vnđ</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" id="price-2">
-                        <label class="custom-control-label" for="price-2">$100 - $200</label>
-                        <span class="badge border font-weight-normal">295</span>
+                        <label class="custom-control-label" for="price-2">0 vnđ - 100 vnđ</label>
+                        <span class="badge border font-weight-normal">0 vnđ - 100 vnđ</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" id="price-3">
-                        <label class="custom-control-label" for="price-3">$200 - $300</label>
-                        <span class="badge border font-weight-normal">246</span>
+                        <label class="custom-control-label" for="price-3">0 vnđ - 100 vnđ</label>
+                        <span class="badge border font-weight-normal">0 vnđ - 100 vnđ</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
                         <input type="checkbox" class="custom-control-input" id="price-4">
-                        <label class="custom-control-label" for="price-4">$300 - $400</label>
-                        <span class="badge border font-weight-normal">145</span>
+                        <label class="custom-control-label" for="price-4">0 vnđ - 100 vnđ</label>
+                        <span class="badge border font-weight-normal">0 vnđ - 100 vnđ</span>
                     </div>
                     <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
                         <input type="checkbox" class="custom-control-input" id="price-5">
-                        <label class="custom-control-label" for="price-5">$400 - $500</label>
-                        <span class="badge border font-weight-normal">168</span>
+                        <label class="custom-control-label" for="price-5">0 vnđ - 100 vnđ</label>
+                        <span class="badge border font-weight-normal">0 vnđ - 100 vnđ</span>
                     </div>
                 </form>
             </div>
@@ -130,7 +130,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <form action="">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search by name">
+                                <input type="text" class="form-control" placeholder="Tìm sản phẩm">
                                 <div class="input-group-append">
                                     <span class="input-group-text bg-transparent text-primary">
                                         <i class="fa fa-search"></i>
@@ -141,12 +141,12 @@
                         <div class="dropdown ml-4">
                             <button class="btn border dropdown-toggle" type="button" id="triggerId"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Sort by
+                                Bộ Lọc
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
-                                <a class="dropdown-item" href="#">Latest</a>
-                                <a class="dropdown-item" href="#">Popularity</a>
-                                <a class="dropdown-item" href="#">Best Rating</a>
+                                <a class="dropdown-item" href="#">Giá</a>
+                                <a class="dropdown-item" href="#">Tên</a>
+                                <a class="dropdown-item" href="#">Đánh giá</a>
                             </div>
                         </div>
                     </div>
@@ -169,10 +169,9 @@
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
                             <a href="/viewdetail/<?=$product_cate->id?>" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-eye text-primary mr-1"></i>View
-                                Detail</a>
-                            <a href="/addtocart" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                                    class="fas fa-eye text-primary mr-1"></i>Xem chi tiết</a>
+                            <a href="/addtocart1/<?= $product_cate->id?>" class="btn btn-sm text-dark p-0"><i
+                                    class="fas fa-shopping-cart text-primary mr-1"></i>Thêm giỏ hàng</a>
                         </div>
                     </div>
                 </div>
@@ -197,10 +196,9 @@
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
                             <a href="/viewdetail/<?=$product_all->id?>" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-eye text-primary mr-1"></i>View
-                                Detail</a>
-                            <a href="/addtocart" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                                    class="fas fa-eye text-primary mr-1"></i>Xem chi tiết</a>
+                            <a href="/addtocart1/<?= $product_all->id?>" class="btn btn-sm text-dark p-0"><i
+                                    class="fas fa-shopping-cart text-primary mr-1"></i>Thêm giỏ hàng</a>
                         </div>
                     </div>
                 </div>
@@ -225,10 +223,9 @@
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
                             <a href="/viewdetail/<?=$search->id?>" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-eye text-primary mr-1"></i>View
-                                Detail</a>
-                            <a href="/addtocart" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                                    class="fas fa-eye text-primary mr-1"></i>Xem chi tiết</a>
+                            <a href="/addtocart1/<?= $search->id?>" class="btn btn-sm text-dark p-0"><i
+                                    class="fas fa-shopping-cart text-primary mr-1"></i>Thêm giỏ hàng</a>
                         </div>
                     </div>
                 </div>

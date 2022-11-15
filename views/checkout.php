@@ -4,11 +4,11 @@
 <!-- Page Header Start -->
 <div class="container-fluid bg-secondary mb-5">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-        <h1 class="font-weight-semi-bold text-uppercase mb-3">Checkout</h1>
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Thanh toán</h1>
         <div class="d-inline-flex">
-            <p class="m-0"><a href="">Home</a></p>
+            <p class="m-0"><a href="">Trang chủ</a></p>
             <p class="m-0 px-2">-</p>
-            <p class="m-0">Checkout</p>
+            <p class="m-0">Thanh toán</p>
         </div>
     </div>
 </div>
@@ -21,7 +21,7 @@
     <div class="row px-xl-5">
         <div class="col-lg-8">
             <div class="mb-4">
-                <h4 class="font-weight-semi-bold mb-4">Login</h4>
+                <h4 class="font-weight-semi-bold mb-4">Đăng nhập</h4>
                 <form action="/login_cus" method="post">
 
                     <div class="row">
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="mb-4">
-            <h4 class="font-weight-semi-bold mb-4">Register</h4>
+            <h4 class="font-weight-semi-bold mb-4">Đăng ký</h4>
             <form action="/register" method="post">
 
                 <div class="row">
@@ -97,19 +97,19 @@
                         <input class="form-control" name="email" type="email">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Password</label>
+                        <label>Mật khẩu</label>
                         <input class="form-control" name="password" type="password">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Name</label>
+                        <label>Tên</label>
                         <input class="form-control" name="name" type="type">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Phone</label>
+                        <label>Số điện thoại</label>
                         <input class="form-control" name="phone" type="type">
                     </div>
                     <div class="col-md-6 form-group">
-                        <label>Address/Shipping</label>
+                        <label>Địa chỉ/Shipping</label>
                         <input class="form-control" name="address" type="type">
                     </div>
                     <div class="col-md-6 form-group">
@@ -117,7 +117,7 @@
                         <input class="form-control" name="zipcode" type="type">
                     </div>
                     <div class="col-md-6 form-group">
-                        <button class="btn btn-block btn-primary font-weight-bold my-1 py-1">Register</button>
+                        <button class="btn btn-block btn-primary font-weight-bold my-1 py-1">Đăng ký</button>
                     </div>
             </form>
 
@@ -177,11 +177,11 @@
 <div class="col-lg-4">
     <div class="card border-secondary mb-5">
         <div class="card-header bg-secondary border-0">
-            <h4 class="font-weight-semi-bold m-0">Order Total</h4>
+            <h4 class="font-weight-semi-bold m-0">Tổng mua hàng</h4>
         </div>
         <div class="card-body">
 
-            <h5 class="font-weight-medium mb-3">Products</h5>
+            <h5 class="font-weight-medium mb-3">Sản phẩm</h5>
             <?php $total = 0;?>
             <?php if(!empty($_SESSION['cart'])) :?>
 
@@ -197,7 +197,7 @@
             <?php endif;?>
             <hr class="mt-0">
             <div class="d-flex justify-content-between mb-3 pt-1">
-                <h6 class="font-weight-medium">Subtotal</h6>
+                <h6 class="font-weight-medium">Tổng</h6>
                 <h6 class="font-weight-medium"><?=number_format($total,0)?></h6>
             </div>
             <div class="d-flex justify-content-between">
@@ -207,7 +207,7 @@
         </div>
         <div class="card-footer border-secondary bg-transparent">
             <div class="d-flex justify-content-between mt-2">
-                <h5 class="font-weight-bold">Total</h5>
+                <h5 class="font-weight-bold">Tổng</h5>
                 <h5 class="font-weight-bold"><?=number_format($total,0)?></h5>
             </div>
         </div>
@@ -215,7 +215,7 @@
     </div>
     <div class="card border-secondary mb-5">
         <div class="card-header bg-secondary border-0">
-            <h4 class="font-weight-semi-bold m-0">Payment</h4>
+            <h4 class="font-weight-semi-bold m-0">Phương thức thanh toán</h4>
         </div>
         <div class="card-body">
             <div class="form-group">
@@ -239,12 +239,12 @@
         </div>
         <?php if(!empty($_SESSION['customer_id'])):?>
         <div class="card-footer border-secondary bg-transparent">
-            <a href="/checkoutcart" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Place Order</a>
+            <a href="/checkoutcart" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Thanh toán</a>
         </div>
         <?php else: ?>
         <div class="card-footer border-secondary bg-transparent">
-            <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Login Or
-                Register</button>
+            <button disabled class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3">Đăng nhập hoặc đăng
+                ký</button>
         </div>
         <?php endif;?>
     </div>

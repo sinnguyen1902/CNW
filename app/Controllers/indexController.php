@@ -114,6 +114,55 @@ class indexController{
        require_once APP_ROOT . '/views/cart.php';
 	}
 
+
+    public function addtocart1(RouteCollection $routes, $id)
+	{
+        $this->aulogin();
+        $slider =  product::all()->random(2);
+
+        
+        $product = product::with('brand','category')->orderby('id','desc')->take(4)->get();
+        
+        $product_all = product::with('brand','category')->get();
+        
+        $category = category::all();
+        $cate_home = category::all();
+        //cart
+            $product_cart = product::where('id',$id)->first();
+        
+            $quantity = '1';
+    
+    
+        if (isset($_SESSION["cart"]) && isset($product_cart)){
+            $item_array_id = array_column($_SESSION["cart"],"id");
+            if (!in_array($product_cart->id,$item_array_id)){
+                $count = count($_SESSION["cart"]);
+                $item_array = array(
+                    'id' => $product_cart->id,
+                    'title' => $product_cart->title,
+                    'price' => $product_cart->price,
+                    'quantity' => $quantity,
+                    'img' => $product_cart->img,
+                );
+                $_SESSION["cart"][$count] = $item_array;
+            }else{
+                echo '<script>alert("Product is already Added to Cart")</script>';
+            }
+        }elseif(isset($product_cart->id)){
+            $item_array = array(
+                    'id' => $product_cart->id,
+                    'title' => $product_cart->title,
+                    'price' => $product_cart->price,
+                    'quantity' => $quantity,
+                    'img' => $product_cart->img,
+            );
+            $_SESSION["cart"][0] = $item_array;
+        }
+       require_once APP_ROOT . '/views/cart.php';
+	}
+
+
+
     public function deletecart(RouteCollection $routes , $id)
 	{
         $this->aulogin();

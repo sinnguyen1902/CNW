@@ -3,11 +3,11 @@
 <!-- Page Header Start -->
 <div class="container-fluid bg-secondary mb-5">
     <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-        <h1 class="font-weight-semi-bold text-uppercase mb-3">Shop Detail</h1>
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Chi tiết</h1>
         <div class="d-inline-flex">
-            <p class="m-0"><a href="">Home</a></p>
+            <p class="m-0"><a href="">Trang chủ</a></p>
             <p class="m-0 px-2">-</p>
-            <p class="m-0">Shop Detail</p>
+            <p class="m-0">Chi tiết</p>
         </div>
     </div>
 </div>
@@ -53,7 +53,7 @@
                     <small class="fas fa-star-half-alt"></small>
                     <small class="far fa-star"></small>
                 </div>
-                <small class="pt-1">(50 Reviews)</small>
+                <small class="pt-1">(50 Đánh giá)</small>
             </div>
             <h3 class="font-weight-semi-bold mb-4"><?= $viewdetail->price.'.'.'VND'?></h3>
             <p class="mb-4"><?= $viewdetail->des?>
@@ -125,12 +125,12 @@
                             </button>
                         </div> -->
                     </div>
-                    <button name="addtocart" class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add
-                        To Cart</button>
+                    <button name="addtocart" class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Thêm
+                        giỏ hàng</button>
                 </div>
             </form>
             <div class="d-flex pt-2">
-                <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
+                <p class="text-dark font-weight-medium mb-0 mr-2">Chia sẽ:</p>
                 <div class="d-inline-flex">
                     <a class="text-dark px-2" href="">
                         <i class="fab fa-facebook-f"></i>
@@ -151,18 +151,18 @@
     <div class="row px-xl-5">
         <div class="col">
             <div class="nav nav-tabs justify-content-center border-secondary mb-4">
-                <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Description</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Information</a>
-                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a>
+                <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Mô tả</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Thông tin</a>
+                <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-3">Đánh giá (0)</a>
             </div>
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="tab-pane-1">
-                    <h4 class="mb-3">Product Description</h4>
+                    <h4 class="mb-3">Mô tả sản phẩm</h4>
                     <p><?= $viewdetail->des?></p>
 
                 </div>
                 <div class="tab-pane fade" id="tab-pane-2">
-                    <h4 class="mb-3">Additional Information</h4>
+                    <h4 class="mb-3">Thông tin</h4>
                     <p><?= $viewdetail->title?>.</p>
                     <div class="row">
                         <div class="col-md-6">
@@ -219,7 +219,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <h4 class="mb-4">Leave a review</h4>
                             <small>Your email address will not be published. Required fields are marked *</small>
                             <div class="d-flex my-3">
@@ -249,7 +249,7 @@
                                     <input type="submit" value="Leave Your Review" class="btn btn-primary px-3">
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
